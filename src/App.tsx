@@ -3,6 +3,11 @@ import { AppRouter } from "./AppRouter";
 import { useDispatch } from "react-redux";
 import { toggleScrolledDown } from "./assets/store/navigation/navigationSlice";
 
+export const ScrolltoTop = () => {
+  document.querySelector('#top')?.scrollIntoView({
+    behavior: "smooth"
+  })
+}
 
 function App() {
   const dispatch = useDispatch()
@@ -18,7 +23,7 @@ function App() {
 
 
   return (
-    <div className='App'>
+    <div id="top" className='App'>
         <AppRouter />
     </div>
   );

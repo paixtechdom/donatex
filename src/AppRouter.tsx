@@ -9,6 +9,7 @@ const Footer = lazy(() => import('./assets/components/Footer'))
 const HomePage = lazy(() => import("./pages/home/page"))
 const ContactPage = lazy(() => import("./pages/contact/page"))
 import ServicesPage from './pages/services/ServicesPage';
+import AboutPage from './pages/about/page';
 
 
 export const AppRouter = () => {  
@@ -19,6 +20,7 @@ export const AppRouter = () => {
                     <Navbar />
                     <Routes>
                         <Route path="/" element={<HomePage />}/>
+                        <Route path="/about" element={<AboutPage />}/>
                         <Route path="/services" element={<ServicesPage />}/>
                         <Route path="/contact" element={<ContactPage />}/>
                         <Route path="/*" element={<PageNotFound />} />
@@ -33,9 +35,9 @@ export const AppRouter = () => {
 
   const FallbackComponent = () => {
     return(
-        <section className='center flex-col gap-2 h-screen w-full'>
+        <section className='center flex-col gap-2 h-screen w-full bg-bg'>
             <strong className='font-bold text-xl text-center text-primary'>
-                St. Thomas Specialist Hospital
+                Donatex Diagnostics And Global Services
             </strong>
         </section>
     )
