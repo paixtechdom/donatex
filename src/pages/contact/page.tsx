@@ -17,13 +17,13 @@ const ContactPage = () => {
             <div className="w-11/12 lg:w-10/12 center flex-col gap-9 text-primary">
 
                 <div className="w-full flex flex-col lg:flex-row gap-[50px] lg:gap-[25px] xl:gap-[50px] p-2 rounded-xl bg-white min-h-[80vh] shadow-2xl">
-                    <div className="bg-primary flex flex-col justify-between text-gray-300 p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-5/12 gap-[10vh] lg:gap-9">
+                    <div className="bg-primary flex flex-col justify-between text-gray-300 p-9 py-[6vh] rounded-t-xl lg:rounded-r-none lg:rounded-l-xl relative overflow-hidden w-full lg:w-5/12 gap-[5vh] lg:gap-9">
 
-                        <div className="flex flex-col gap-1 h-[20%]">
+                        <div className="flex flex-col gap-1 h-[10%]">
                             <h2 className="text-white text-2xl font-semibold">Get in touch</h2>
                         </div>
                         
-                        <div className="flex flex-col gap-5 h-[80%]">
+                        <div className="flex flex-col gap-5 h-[90%]">
                             {
                                 ContactInfo.map((contact : ContactInfoInterface, i) => (
                                     <div key={i} className="flex gap-3 items-start text-white">
@@ -31,7 +31,8 @@ const ContactPage = () => {
                                             {contact.icon}
                                         </div>
 
-                                        <p>{contact.contact}</p>
+                                        <a href={`${contact.link}`}>{contact.contact}</a>
+
                                     </div>
                                 ))
                             }

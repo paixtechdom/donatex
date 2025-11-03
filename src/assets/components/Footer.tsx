@@ -6,15 +6,18 @@ import { ContactInfoInterface } from "../Interfaces"
 export const ContactInfo = [
     {
         icon: <BsTelephoneOutboundFill />,
-        contact: '+234 803 401 8954'
+        contact: '+234 803 401 8954',
+        link: "tel:+2348034018954"
     },
     {
         icon: <BsEnvelopeFill />,
-        contact: 'donatexdiagnostics@gmail.com'
+        contact: 'donatexdiagnostics@gmail.com',
+        link: "mailto:donatexdiagnostics@gmail.com"
     },
     {
         icon: <BsGeoAltFill />,
-        contact: 'RW8G+Q4C, Apebi Street, Ijebu Ode 120101, Ogun State'
+        contact: 'RW8G+Q4C, Apebi Street, Ijebu Ode 120101, Ogun State',
+        link: "#"
     },
 ]
 
@@ -41,7 +44,7 @@ const Footer = () => {
                             <div key={i} className="flex items-center gap-2 w-full">
                                 {info.icon}
 
-                                <a href="">{info.contact}</a>
+                                <a href={`${info.link}`}>{info.contact}</a>
                             </div>
                         ))
                     }

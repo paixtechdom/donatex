@@ -29,7 +29,7 @@ const ServicesPage = () => {
 
         <div className="center gap-[10vh] flex-col w-11/12 lg:w-10/12">
 
-            <div className="flex flex-col gap-y-12 lg:gap-y-8 mt-3 w-full lg:w-10/12">
+            <div className="flex flex-col mt-3 w-full lg:w-10/12">
                 {
                     ServicesContent.services?.map((sub, j) => (
                         <AService 
@@ -47,17 +47,17 @@ const ServicesPage = () => {
             <div className="flex flex-col gap-5 w-full mt-9">
                 <h2 className="text-3xl font-bold">Our Pathology Departments</h2>
 
-                <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+                <div className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3 gap-3">
                     {
                         PathologyDepartments.main.map((p, i) => (
-                        <div key={i} className="text-xl center text-center bg-primary bg-opacity-40 h-[20vh] rounded-xl shadow-lg">
+                        <div key={i} className="text-xl center text-center bg-primary bg-opacity-40 h-[20vh] rounded-xl shadow-lg p-6">
                             {p.title}
                         </div>
                         )) 
                     }
                     {
                         PathologyDepartments.others.map((p, i) => (
-                            <div key={i} className="text-xl center text-center bg-primary bg-opacity-40 h-[20vh] rounded-xl shadow-lg">
+                            <div key={i} className="text-xl center text-center bg-primary bg-opacity-40 h-[20vh] rounded-xl shadow-lg p-6">
                                 {p}
                         </div>  
                         )) 
@@ -81,7 +81,7 @@ const ServicesPage = () => {
                 ))}
                </div>
 
-               <div className="flex flex-col gap-3 w-full mt-12">
+               <div className="flex flex-col gap-5 w-full mt-12">
                 {ServicesContent.conslusion.map((p, i) => (
                     <p key={i}>{p}</p>
                 ))}
@@ -100,14 +100,14 @@ export default ServicesPage
 
 const AService:FC<any> = ({sub, j, currentService, setCurrentService}) => {
     return(
-         <div id={sub.title.replace(' ', '').replace(' ', '').replace(' ', '').replace(' ', '').replace('/', '')} key={j} className={`flex flex-col gap-4 w-full ${currentService === j ? "p-6 bg-primary bg-opacity-5 rounded-2xl w-7/12" : ""}`}>
+         <div id={sub.title.replace(' ', '').replace(' ', '').replace(' ', '').replace(' ', '').replace('/', '')} key={j} className={`flex flex-col gap-4 w-full ${currentService === j ? "p-6 bg-primary bg-opacity-5 rounded-2xl w-7/12" : ""} mt-9`}>
 
 
             <div className={`relative overflow-hidden flex items-center justify-between cursor-pointer gap-3 ${currentService === j ? "w-full" : "w-full lg:w-7/12 "}`} onClick={() => {
                 setCurrentService(j) 
-                document.querySelector(`#${sub.title.replace(' ', '').replace(' ', '').replace(' ', '').replace(' ', '').replace('/', '')}`)?.scrollIntoView({
-                    behavior: "smooth"
-                })
+                // document.querySelector(`#${sub.title.replace(' ', '').replace(' ', '').replace(' ', '').replace(' ', '').replace('/', '')}`)?.scrollIntoView({
+                //     behavior: "smooth"
+                // })
             }}>
                 <h4 className='font-bold text-lg z-1'>{sub.title}</h4>
 

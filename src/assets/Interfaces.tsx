@@ -40,7 +40,8 @@ export interface FooterLinksInterface {
 }
 export interface ContactInfoInterface {
     icon: JSX.Element,
-    contact: string
+    contact: string,
+    link?: string
 }
 
 
