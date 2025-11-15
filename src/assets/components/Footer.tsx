@@ -11,8 +11,13 @@ export const ContactInfo = [
     },
     {
         icon: <BsEnvelopeFill />,
-        contact: 'donatexdiagnostics@gmail.com',
-        link: "mailto:donatexdiagnostics@gmail.com"
+        contact: 'info@donatexdiagnostics.com.ng',
+        link: "mailto:info@donatexdiagnostics.com.ng"
+    },
+    {
+        icon: <BsEnvelopeFill />,
+        contact: 'donald@donatexdiagnostics.com.ng',
+        link: "mailto:donald@donatexdiagnostics.com.ng"
     },
     {
         icon: <BsGeoAltFill />,
@@ -32,7 +37,7 @@ const Footer = () => {
                 <div className="flex flex-col lg:grid-cols-3 gap-y-10 md:gap-9">
 
                     <div className="flex flex-col gap-4 col-span-2">
-                        <h2 className="text-3xl text-white">Donatext Diagnostics And Global Services</h2>
+                        <h2 className="text-3xl text-white">Donatex Diagnostics And Global Services</h2>
                         <p>Comprehensive, high-quality laboratory testing for your health needs.</p>
                     </div>
 
